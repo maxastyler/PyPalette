@@ -1,0 +1,14 @@
+#! /usr/bin/env python
+
+import tkinter as tk
+
+from PyMain import MainApp
+
+root=tk.Tk()
+
+def main():
+    app=MainApp(root)
+    app.run()
+
+if __name__=='__main__':
+    main()
