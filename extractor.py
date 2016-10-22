@@ -185,7 +185,7 @@ def prepare_nice(file_name):
                 new_colours.append(colours[i])
     return new_colours
 
-def prepare_pypallet(file_name):
+def prepare_pypalette(file_name):
     colours=prepare_for_terminal(file_name)
     colour_dict={}
     colour_dict['colour_fg']=colours['foreground']
@@ -194,7 +194,7 @@ def prepare_pypallet(file_name):
         colour_dict['colour_{0}'.format(i)]=colours['color{0}'.format(i)]
     return colour_dict
 
-def prepare_pypallet_9(file_name):
+def prepare_pypalette_9(file_name):
     colours=scale_colours(extract_colours_from_image(file_name, 9, (200, 200), 1), 0.3, 0.95)
     colours.sort(key=lambda x: rgb2hsv(x)[2])
     colour_dict={}
