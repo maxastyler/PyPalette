@@ -17,11 +17,11 @@ def load_json(file_name):
 class MainApp:
     def __init__(self, root):
         self.root=root
-        self.app=PyPallet(master=self.root)
+        self.app=PyPalette(master=self.root)
     def run(self):
         self.app.mainloop()
 
-class PyPallet(tk.Frame):
+class PyPalette(tk.Frame):
     def __init__(self, master):
         super().__init__(master)
 
@@ -212,7 +212,7 @@ class ImageLoader(tk.Frame):
         self.photo=ImageTk.PhotoImage(pilimage)
         self.canvas.delete('all')
         self.canvas.create_image(300, 300, image=self.photo)
-        cols=prepare_pypallet(os.path.expanduser(self.load_text.get()))
+        cols=prepare_pypalette(os.path.expanduser(self.load_text.get()))
         for key in self.cp.labels:
             self.cp.labels[key].colour.set(cols[key])
 
@@ -222,7 +222,7 @@ class ImageLoader(tk.Frame):
         self.photo=ImageTk.PhotoImage(pilimage)
         self.canvas.delete('all')
         self.canvas.create_image(300, 300, image=self.photo)
-        cols=prepare_pypallet_9(os.path.expanduser(self.load_text.get()))
+        cols=prepare_pypalette_9(os.path.expanduser(self.load_text.get()))
         for key in cols:
             self.cp.labels[key].colour.set(cols[key])
 
